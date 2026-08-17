@@ -1,0 +1,75 @@
+{
+  "artwork_specs": {
+    "poster": {
+      "width": 600,
+      "height": 900,
+      "aspect_ratio": "2:3",
+      "aspect_tolerance": 0.05,
+      "min_width": 400,
+      "max_width": 1200,
+      "max_file_size_kb": 200,
+      "allowed_formats": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ]
+    },
+    "banner": {
+      "width": 1280,
+      "height": 720,
+      "aspect_ratio": "16:9",
+      "aspect_tolerance": 0.05,
+      "min_width": 960,
+      "max_width": 1920,
+      "max_file_size_kb": 200,
+      "allowed_formats": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ]
+    },
+    "thumbnail": {
+      "width": 640,
+      "height": 360,
+      "aspect_ratio": "16:9",
+      "aspect_tolerance": 0.05,
+      "min_width": 320,
+      "max_width": 1280,
+      "max_file_size_kb": 200,
+      "allowed_formats": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ]
+    }
+  },
+  "sections": [
+    "featured",
+    "series",
+    "minisodes",
+    "songs"
+  ],
+  "categories": [
+    "adventure",
+    "folk",
+    "friendship",
+    "india",
+    "language",
+    "learning",
+    "maths",
+    "music",
+    "nature",
+    "reading",
+    "science",
+    "singalong",
+    "stories",
+    "travel",
+    "values"
+  ],
+  "languages": [
+    "English",
+    "Hindi",
+    "Telugu",
+    "Tamil"
+  ]
+}
