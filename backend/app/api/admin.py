@@ -29,6 +29,8 @@ from app.services.validation_service import generate_validation_report
 from app.services.publish_service import publish_catalogue
 from app.storage import get_storage
 
+router = APIRouter(prefix="/admin", tags=["admin"])
+
 
 # --- Shows ---
 

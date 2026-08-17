@@ -1,8 +1,14 @@
+from __future__ import annotations
 import uuid
 from datetime import datetime, timezone
+from typing import TYPE_CHECKING
 from sqlalchemy import String, Integer, ForeignKey, DateTime, Index
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db.session import Base
+
+if TYPE_CHECKING:
+    from app.models.show import Show
+    from app.models.episode import Episode
 
 
 class Artwork(Base):
@@ -31,10 +37,10 @@ class Artwork(Base):
     )
 
     # Relationships
-    show: Mapped["Show | None"] = relationship(
+    show: Mapped[Show | None] = relationship(
         "Show", back_populates="artworks", foreign_keys=[show_id]
     )
-    episode: Mapped["Episode | None"] = relationship(
+    episode: Mapped[Episode | None] = relationship(
         "Episode", back_populates="artworks", foreign_keys=[episode_id]
     )
 
