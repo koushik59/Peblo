@@ -208,34 +208,3 @@ class Storage(ABC):
 * **Health Endpoint:** `GET /health` tests PostgreSQL connectivity (`SELECT 1`) and storage read/write status.
 * **Primary Production Alert:** `publish_job_failure_count > 0` OR `publish_duration_seconds > 10s`.
   * *Reasoning:* The publish pipeline is the single critical bridge between CMS content creation and viewer delivery. Alerting immediately catches database locks, storage network timeouts, or serialization errors before viewers experience stale or broken catalogues.
-
----
-
-## 7. Demo Video Walkthrough Sequence
-
-Follow this concise sequence when recording your demo video:
-
-1. **Login as Editor**:
-   * Navigate to `http://localhost:3001`
-   * Log in with `editor@example.com` / `editor123`.
-2. **Browse & Edit Content**:
-   * Show the Shows list with pagination, search, and status filters.
-   * Open a show and inspect seasons/episodes.
-3. **Demonstrate Artwork Validation**:
-   * In Show Edit, upload `banner_too_big.png` or an invalid square image.
-   * Point out the human-readable server validation error message.
-   * Upload valid artwork (`poster_good.jpg`).
-4. **Inspect Validation Report**:
-   * Open the **Publish** page.
-   * Show the Validation Report displaying identified blockers and warnings.
-   * Point out that the **Publish** button is disabled with reasons, and highlight the editor permission warning.
-5. **Switch to Admin & Resolve Blocker**:
-   * Log out and log in as `admin@example.com` / `admin123`.
-   * Return to **Publish** and click **Publish Catalogue**.
-   * Show the newly created entry in the **Publish History** table with timestamp and SHA-256 hash.
-6. **Viewer Demonstration**:
-   * Open `http://localhost:3002`.
-   * Show the **Hero Banner** with gradient overlay and action CTA.
-   * Scroll through the **Section Rows** displaying 2:3 poster cards.
-   * Click on a show to open the **Show Detail Modal** (Season 0 in "🎬 Trailers & Extras", collapsed `[EN, HI]` language badges).
-   * Navigate to **Search & Browse** (`/search`) to demonstrate real-time search and category pills.
