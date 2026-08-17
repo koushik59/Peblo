@@ -272,7 +272,7 @@ Prioritizing an honest, production-grade core over rushed superficial features:
 
 ---
 
-## 14. Screen Recording Demo Walkthrough
+## 14. Demo Walkthrough
 
 Follow this concise sequence when recording your demo video:
 
