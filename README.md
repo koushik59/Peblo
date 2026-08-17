@@ -272,7 +272,27 @@ Prioritizing an honest, production-grade core over rushed superficial features:
 
 ---
 
-## 14. Demo Walkthrough
+## 14. Time Spent on Each Part
+
+| Phase / Component | Focus Areas | Approximate Time Spent |
+| :--- | :--- | :--- |
+| **Part A: Backend & Data Modelling** | PostgreSQL relational schema, Alembic migrations, Pillow artwork validation engine, JWT RBAC, composable search, and 49 unit tests. | ~3.5 hours |
+| **Part B: Internal CMS** | React + TypeScript forms, 3-slot labelled artwork uploaders with live previews, real-time validation report, and TanStack Query state management. | ~2.5 hours |
+| **Part C: Viewer Streaming UI** | JioHotstar/Netflix aesthetic, auto-rotating hero showcase, miniature slider strip, horizontal section carousels, show detail modal, and search chips. | ~2.5 hours |
+| **Part D: Pipeline, Docker & CI/CD** | 4-container `docker-compose` orchestration, GitHub Actions CI workflow, `.env.example`, and healthcheck/alerting reasoning. | ~1.5 hours |
+| **Part E: Written Analysis & Resilience** | Atomic publishing failure matrix, Cloudflare R2 migration, search scalability roadmap, trade-off analysis, and documentation. | ~1.0 hour |
+| **Total Time Invested** | **Comprehensive Full-Stack Implementation** | **~11.0 hours** |
+
+---
+
+## 15. Optional Stretch Goals
+
+* **Versioned Catalogue & Audit Trail**: Every publish run is archived as `catalogue.<run_id>.json` in storage and logged to the `PublishRun` PostgreSQL table with timestamps, publisher email, total counts, and SHA-256 content hashes for instant point-in-time rollbacks and diffing.
+* **JioHotstar Signature Viewer UX**: Auto-rotating hero showcase with crossfade transitions, synchronized thumbnail navigator strip, glowing active indicators, and high-density poster grid with hover scaling.
+
+---
+
+## 16. Demo Walkthrough
 
 Follow this concise sequence when recording your demo video:
 
@@ -301,7 +321,7 @@ Follow this concise sequence when recording your demo video:
 7. **Viewer Demonstration**:
    * Open `http://localhost:3002`.
    * Show the **Hero Banner** with gradient overlay and action CTA.
-   * Scroll through the **Section Rows** (Heroes, Trending, New Releases, Classics) displaying 2:3 poster cards.
+   * Scroll through the **Section Rows** displaying 2:3 poster cards.
    * Click on `"The Great Adventure"` to open the **Show Detail Modal**:
      * Show that **Season 0** is not listed in regular season tabs, but in **"🎬 Trailers & Extras"**.
      * Show that collapsed episodes display multi-language badges (`EN`, `HI`, `TA`).
